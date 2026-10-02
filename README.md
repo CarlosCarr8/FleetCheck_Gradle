@@ -39,8 +39,16 @@ After the fix, the JAR file is complete and would compile normally across device
 8.4: 
 The Gradle Wrapper removes the assumption that the developer already has the right version of Gradle pre-installed on their system. This way, running the wrapper, the program automatically downloads and uses the correct version of Gradle for this program.
 
-Step 5:
-Removes the assumption that my computer has a manually installed version of Maven and it forces the download/usage of the right version for this project.
+8.5:
+https://github.com/CarlosCarr8/FleetCheck_Gradle/actions/runs/37003412452
 
-Step 7:
-The bom.json file contains annotations that were not explicitly input since they are transitive dependencies, meaning, jackson-databind (the one we requested) requires lower level libraries (jackson-core and jackson-annotations) in order to function properly. Maven automatically resolved these dependencies. 
+https://github.com/CarlosCarr8/FleetCheck_Gradle
+
+8.6: 
+Just like Maven, the Gradle SBOM contains dependencies that were not explicitly requested, since they are lower-level components needed for the dependecy that we did ask. 
+
+8.7:
+What changed?
+
+Only the Build process changed. The software itself remains untouched (the java source code, app logic, and library requirements). Maven and Gradle are just different engines executing the same instructions to be able to build the final executable JAR.
+
